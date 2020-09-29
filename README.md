@@ -1,4 +1,4 @@
-# ETL_Project
+Extract, Transformation, and Load Coronavirus data
 
 # Proposal
 
