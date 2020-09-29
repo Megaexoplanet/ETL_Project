@@ -40,14 +40,16 @@ The purpose of the Extraction, Transformation, and Load (ETL) Technical Report i
 Summary This section summarized the final objective of the project, the business problem definition (problem statement) and the expected outcome of ETL. 
 
 1.2 SCOPE 
-Scope The data sources are the 2014 IRS tax returns that were obtained from the IRS website itself as well as Coronavirus data that was pulled with FIPS data (able to go down to county numbers). These data sources will be integrated together. The eventual outcome of integrating these data sources is to have a connection between fiscal records and outbreak records in order to provide a database which may elucidate trends and highlight potential containment problems based on socioeconomic data. 
+Scope The data sources are the 2014 IRS tax returns that were obtained from the IRS website itself as well as Coronavirus data that was pulled with FIPS data (able to go down to county numbers). These data sources will be integrated together. The eventual outcome of integrating these data sources is to have a connection between fiscal records and outbreak records in order to provide a database which may elucidate trends and highlight potential containment problems based on socioeconomic data.
+
 1.3 TECHNOLOGIES AND RESOURCE CONTRIBUTIONS 
-Christine: Data purveyor, data cleaning, coding
-Sean: Write up, Data purveyor, coding
-Shayon: Data purveyor, write up
+ChristiAne: Data purveyor, data cleaning, coding, Write up
+Sean: Write up, Data purveyor
+Shayon: Data purveyor, Write up
 Technologies used: PostGreSQL, SQLAlchemy, JupyterLab, Python Pandas, MongoDB,
 PyMongo for Python, VSCode
 Data provided via the IRS and CDC.gov websites
+
 1.4 DEFINITIONS, ACRONYMS AND ABBREVIATIONS 
 •ETL: Extract, Transform and Load 
 •FIPS: Federal Information Processing Standards
