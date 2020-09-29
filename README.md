@@ -5,33 +5,35 @@ TECHNICAL REPORT
 
 TABLE OF CONTENTS
 
-1.INTRODUCTION	1
+1.0 INTRODUCTION
 
-1.1 SUMMARY	1
+1.1 SUMMARY
 
-1.2 SCOPE	2
+1.2 SCOPE
 
-1.3 TECHNOLOGIES AND RESOURCE CONTRIBUTIONS	2
+1.3 TECHNOLOGIES AND RESOURCE CONTRIBUTIONS
 
-1.4 DEFINITIONS, ACRONYMS AND ABBREVIATIONS	2
+1.4 DEFINITIONS, ACRONYMS AND ABBREVIATIONS
 
-2.0 ETL DETAILS	2
+2.0 ETL DETAILS
 
-2.1 DATA IMPORT/EXTRACT SOURCES AND METHOD	2
+2.1 DATA IMPORT/EXTRACT SOURCES AND METHOD
 
-2.2 DATA ACQUISITION	2
+2.2 DATA ACQUISITION
 
-2.3 DATA TRANSFORM	3
+2.3 DATA TRANSFORM
 
-2.4 DATA INTEGRITY	3
+2.4 DATA INTEGRITY
 
-2.5 DATA REFRESH FREQUENCY	3
+2.5 DATA REFRESH FREQUENCY
 
-2.6 DATA SECURITY	3
+2.6 DATA SECURITY
 
-2.7 DATA LOADING AND AVAILABILITY	4
+2.7 DATA LOADING AND AVAILABILITY
 
-1.INTRODUCTION 
+-----------------------------------------------------------------------------------------------------------------
+
+1.0 INTRODUCTION 
 
 The purpose of the Extraction, Transformation, and Load (ETL) Technical Report is to capture details that pertain specifically to ETL portion of the data pipeline that is to be used in a data science project.  This however does keep in mind the final target objective while performing the ETL.
 
