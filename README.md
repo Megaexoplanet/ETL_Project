@@ -37,13 +37,13 @@ The purpose of the Extraction, Transformation, and Load (ETL) Technical Report i
 
 1.1 SUMMARY 
 
-Summary This section summarized the final objective of the project, the business problem definition (problem statement) and the expected outcome of ETL. 
+This section summarized the final objective of the project, the business problem definition (problem statement) and the expected outcome of ETL. 
 
 1.2 SCOPE 
 Scope The data sources are the 2014 IRS tax returns that were obtained from the IRS website itself as well as Coronavirus data that was pulled with FIPS data (able to go down to county numbers). These data sources will be integrated together. The eventual outcome of integrating these data sources is to have a connection between fiscal records and outbreak records in order to provide a database which may elucidate trends and highlight potential containment problems based on socioeconomic data.
 
 1.3 TECHNOLOGIES AND RESOURCE CONTRIBUTIONS 
-ChristiAne: Data purveyor, data cleaning, coding, Write up
+Christiane: Data purveyor, data cleaning, coding, Write up
 Sean: Write up, Data purveyor
 Shayon: Data purveyor, Write up
 Technologies used: PostGreSQL, SQLAlchemy, JupyterLab, Python Pandas, MongoDB,
@@ -57,10 +57,13 @@ Data provided via the IRS and CDC.gov websites
 •Coronavirus: Novel Coronavirus 19
 •IRS: Internal Revenue Services
 •AGI_STUB: Creates different groups for comparisons
+
 2. ETL DETAILS 
-This section outlines a more detailed description of the processes utilized/proposed to achieve the objectives of this initiative. 
+This section outlines a more detailed description of the processes utilized/proposed to achieve the objectives of this initiative.
+
 2.1 DATA IMPORT/EXTRACT SOURCES AND METHOD 
 Income data was downloaded from the IRS off of Kaggle in a CSV file at this website https://www.kaggle.com/irs/individual-income-tax-statistics. Co-Vid 19 data was downloaded from the New York Times off of Kaggle in a CSV file at this website https://www.kaggle.com/fireballbyedimyrnmom/us-counties-covid-19-dataset. The CSV file that listed state abbreviations was downloaded from world population review at this website https://worldpopulationreview.com/states/state-abbreviations/. There are no restrictions on the CSV files from Kaggle.
+
 2.2 DATA ACQUISITION 
 Data for geographical location of Co-Vid 19 cases was needed along with income information related to geographical location. Both sources of data are static. In order to update or obtain the data again it would have to be downloaded from the IRS and the New York Times again through Kaggle. Data downloaded from Kaggle for the New York Times has had the same columns and would work with the existing code. The data from the IRS was from 2014 and updates rarely. If they updated their data they may use different column names and would need to be coded again. 
 2.3 DATA TRANSFORM 
