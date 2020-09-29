@@ -36,7 +36,6 @@ TABLE OF CONTENTS
 The purpose of the Extraction, Transformation, and Load (ETL) Technical Report is to capture details that pertain specifically to ETL portion of the data pipeline that is to be used in a data science project.  This however does keep in mind the final target objective while performing the ETL.
 
 1.1 SUMMARY 
-
 This section summarized the final objective of the project, the business problem definition (problem statement) and the expected outcome of ETL. 
 
 1.2 SCOPE 
@@ -66,6 +65,7 @@ Income data was downloaded from the IRS off of Kaggle in a CSV file at this webs
 
 2.2 DATA ACQUISITION 
 Data for geographical location of Co-Vid 19 cases was needed along with income information related to geographical location. Both sources of data are static. In order to update or obtain the data again it would have to be downloaded from the IRS and the New York Times again through Kaggle. Data downloaded from Kaggle for the New York Times has had the same columns and would work with the existing code. The data from the IRS was from 2014 and updates rarely. If they updated their data they may use different column names and would need to be coded again. 
+
 2.3 DATA TRANSFORM 
 Our transformation of the data began with our IRS data which had several columns dropped because they were extraneous to our purpose and we needed to optimize the database. Other columns needed to be renamed in order to understandably label the data and call it in the database. The Co-Vid 19 data needed columns dropped that were not useful for our purpose. Finally, we needed the Co-Vid 19 data to be capable of being related to the IRS data. I decided to merge a state abbreviation list to the Co-Vid 19 data which completed our main task. We determined minimal calculations needed to be applied to our data because our data had been presented structurally to our liking.  
 2.4 DATA INTEGRITY 
