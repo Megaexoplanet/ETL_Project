@@ -77,10 +77,14 @@ Data for geographical location of Co-Vid 19 cases was needed along with income i
 
 Our transformation of the data began with our IRS data which had several columns dropped because they were extraneous to our purpose and we needed to optimize the database. Other columns needed to be renamed in order to understandably label the data and call it in the database. The Co-Vid 19 data needed columns dropped that were not useful for our purpose. Finally, we needed the Co-Vid 19 data to be capable of being related to the IRS data. I decided to merge a state abbreviation list to the Co-Vid 19 data which completed our main task. We determined minimal calculations needed to be applied to our data because our data had been presented structurally to our liking.
 
-2.4 DATA INTEGRITY 
+2.4 DATA INTEGRITY
+
 The Co-Vid 19 data had fips numbers that were not standardly used with decimal points after them. Also, there were N/As and unknowns in several columns in the Co-Vid data on the county level which we decided to drop completely. We believed our client would need a complete harmonized dataset to quickly and easily run data without our assistance. Due to the frequency of our data we were able to drop multiple columns with redundant data and columns that did not give value to the underlying dataset. Since the data has to be downloaded in a CSV file to load into PANDAS and then uploaded to pgAdmin then it would make sense to notify the team when it is updated. I wouldn’t think that it would be necessary to notify the team. For notifications we will have one service monitoring for change, using SqlDependency/QueryNotifications. This service would push notifications, using WCF for instance, to all our clients running apps. Our client would subscribe to changes such as (“the table COVID19 was changed”).
+
 2.5 DATA REFRESH FREQUENCY  
+
 Our IRS data was a challenge to find as we wanted to keep the integrity of the data. With this we ended up keeping the IRS income dataset static and used the most recent year available which is 2014. We thought this would go well with our main dataset the COVID19 geographic data. This data is refreshed daily, however, we have decided it was best to cut down our frequency to weekly as we would like the ability to quality check and perform other tasks as needed. This would provide our client with a greater accuracy and continuation uninterrupted data. It would be necessary to update the local data with the new Co-Vid data at least weekly in order to keep track of changing numbers of Co-Vid cases to states.
+
 2.6 DATA SECURITY 
 All data is open sourced from the web and does not have any personal information which could be attached to third parties. The data is purely for knowledge and educational purposes and since it is open source is readily available to be utilized. The data that is pulled from the cdc.gov website had to be specifically requested forand as such is not for making high level decisions. Purely for educational purposes and elucidating potential trends
 2.7 DATA LOADING AND AVAILABILITY 
