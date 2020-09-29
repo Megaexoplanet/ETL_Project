@@ -36,12 +36,15 @@ TABLE OF CONTENTS
 The purpose of the Extraction, Transformation, and Load (ETL) Technical Report is to capture details that pertain specifically to ETL portion of the data pipeline that is to be used in a data science project.  This however does keep in mind the final target objective while performing the ETL.
 
 1.1 SUMMARY 
+
 This section summarized the final objective of the project, the business problem definition (problem statement) and the expected outcome of ETL. 
 
 1.2 SCOPE 
+
 Scope The data sources are the 2014 IRS tax returns that were obtained from the IRS website itself as well as Coronavirus data that was pulled with FIPS data (able to go down to county numbers). These data sources will be integrated together. The eventual outcome of integrating these data sources is to have a connection between fiscal records and outbreak records in order to provide a database which may elucidate trends and highlight potential containment problems based on socioeconomic data.
 
 1.3 TECHNOLOGIES AND RESOURCE CONTRIBUTIONS 
+
 Christiane: Data purveyor, data cleaning, coding, Write up
 Sean: Write up, Data purveyor
 Shayon: Data purveyor, Write up
@@ -50,6 +53,7 @@ PyMongo for Python, VSCode
 Data provided via the IRS and CDC.gov websites
 
 1.4 DEFINITIONS, ACRONYMS AND ABBREVIATIONS 
+
 •ETL: Extract, Transform and Load 
 •FIPS: Federal Information Processing Standards
 •Covid-19: Novel Coronavirus 19
@@ -58,16 +62,21 @@ Data provided via the IRS and CDC.gov websites
 •AGI_STUB: Creates different groups for comparisons
 
 2. ETL DETAILS 
+
 This section outlines a more detailed description of the processes utilized/proposed to achieve the objectives of this initiative.
 
 2.1 DATA IMPORT/EXTRACT SOURCES AND METHOD 
+
 Income data was downloaded from the IRS off of Kaggle in a CSV file at this website https://www.kaggle.com/irs/individual-income-tax-statistics. Co-Vid 19 data was downloaded from the New York Times off of Kaggle in a CSV file at this website https://www.kaggle.com/fireballbyedimyrnmom/us-counties-covid-19-dataset. The CSV file that listed state abbreviations was downloaded from world population review at this website https://worldpopulationreview.com/states/state-abbreviations/. There are no restrictions on the CSV files from Kaggle.
 
 2.2 DATA ACQUISITION 
+
 Data for geographical location of Co-Vid 19 cases was needed along with income information related to geographical location. Both sources of data are static. In order to update or obtain the data again it would have to be downloaded from the IRS and the New York Times again through Kaggle. Data downloaded from Kaggle for the New York Times has had the same columns and would work with the existing code. The data from the IRS was from 2014 and updates rarely. If they updated their data they may use different column names and would need to be coded again. 
 
 2.3 DATA TRANSFORM 
-Our transformation of the data began with our IRS data which had several columns dropped because they were extraneous to our purpose and we needed to optimize the database. Other columns needed to be renamed in order to understandably label the data and call it in the database. The Co-Vid 19 data needed columns dropped that were not useful for our purpose. Finally, we needed the Co-Vid 19 data to be capable of being related to the IRS data. I decided to merge a state abbreviation list to the Co-Vid 19 data which completed our main task. We determined minimal calculations needed to be applied to our data because our data had been presented structurally to our liking.  
+
+Our transformation of the data began with our IRS data which had several columns dropped because they were extraneous to our purpose and we needed to optimize the database. Other columns needed to be renamed in order to understandably label the data and call it in the database. The Co-Vid 19 data needed columns dropped that were not useful for our purpose. Finally, we needed the Co-Vid 19 data to be capable of being related to the IRS data. I decided to merge a state abbreviation list to the Co-Vid 19 data which completed our main task. We determined minimal calculations needed to be applied to our data because our data had been presented structurally to our liking.
+
 2.4 DATA INTEGRITY 
 The Co-Vid 19 data had fips numbers that were not standardly used with decimal points after them. Also, there were N/As and unknowns in several columns in the Co-Vid data on the county level which we decided to drop completely. We believed our client would need a complete harmonized dataset to quickly and easily run data without our assistance. Due to the frequency of our data we were able to drop multiple columns with redundant data and columns that did not give value to the underlying dataset. Since the data has to be downloaded in a CSV file to load into PANDAS and then uploaded to pgAdmin then it would make sense to notify the team when it is updated. I wouldn’t think that it would be necessary to notify the team. For notifications we will have one service monitoring for change, using SqlDependency/QueryNotifications. This service would push notifications, using WCF for instance, to all our clients running apps. Our client would subscribe to changes such as (“the table COVID19 was changed”).
 2.5 DATA REFRESH FREQUENCY  
