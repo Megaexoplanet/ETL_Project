@@ -34,8 +34,11 @@ TABLE OF CONTENTS
 1.INTRODUCTION 
 
 The purpose of the Extraction, Transformation, and Load (ETL) Technical Report is to capture details that pertain specifically to ETL portion of the data pipeline that is to be used in a data science project.  This however does keep in mind the final target objective while performing the ETL.
+
 1.1 SUMMARY 
+
 Summary This section summarized the final objective of the project, the business problem definition (problem statement) and the expected outcome of ETL. 
+
 1.2 SCOPE 
 Scope The data sources are the 2014 IRS tax returns that were obtained from the IRS website itself as well as Coronavirus data that was pulled with FIPS data (able to go down to county numbers). These data sources will be integrated together. The eventual outcome of integrating these data sources is to have a connection between fiscal records and outbreak records in order to provide a database which may elucidate trends and highlight potential containment problems based on socioeconomic data. 
 1.3 TECHNOLOGIES AND RESOURCE CONTRIBUTIONS 
