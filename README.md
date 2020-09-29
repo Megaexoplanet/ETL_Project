@@ -1,11 +1,7 @@
 Extract, Transformation, and Load Coronavirus data
 
-Overview
 
-Extraction,
-Transformation, and Load
-
-Techinical report
+TECHNICAL REPORT
 
 TABLE OF CONTENTS
 
@@ -19,7 +15,7 @@ TABLE OF CONTENTS
 
 1.4 DEFINITIONS, ACRONYMS AND ABBREVIATIONS	2
 
-2. ETL DETAILS	2
+2.0 ETL DETAILS	2
 
 2.1 DATA IMPORT/EXTRACT SOURCES AND METHOD	2
 
@@ -36,6 +32,7 @@ TABLE OF CONTENTS
 2.7 DATA LOADING AND AVAILABILITY	4
 
 1.INTRODUCTION 
+
 The purpose of the Extraction, Transformation, and Load (ETL) Technical Report is to capture details that pertain specifically to ETL portion of the data pipeline that is to be used in a data science project.  This however does keep in mind the final target objective while performing the ETL.
 1.1 SUMMARY 
 Summary This section summarized the final objective of the project, the business problem definition (problem statement) and the expected outcome of ETL. 
