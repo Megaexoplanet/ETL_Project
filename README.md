@@ -5,8 +5,10 @@ Overview
 Extraction,
 Transformation, and Load
 
-Technical Report
+Techinical report
+
 TABLE OF CONTENTS
+
 1.INTRODUCTION	1
 1.1 SUMMARY	1
 1.2 SCOPE	2
