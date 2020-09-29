@@ -1,5 +1,6 @@
 Extract, Transformation, and Load Coronavirus data
 
+-----------------------------------------------------------------------------------------------------------------
 
 TECHNICAL REPORT
 
@@ -63,7 +64,7 @@ Data provided via the IRS and CDC.gov websites
 •IRS: Internal Revenue Services
 •AGI_STUB: Creates different groups for comparisons
 
-2. ETL DETAILS 
+2.0 ETL DETAILS 
 
 This section outlines a more detailed description of the processes utilized/proposed to achieve the objectives of this initiative.
 
@@ -88,8 +89,10 @@ The Co-Vid 19 data had fips numbers that were not standardly used with decimal p
 Our IRS data was a challenge to find as we wanted to keep the integrity of the data. With this we ended up keeping the IRS income dataset static and used the most recent year available which is 2014. We thought this would go well with our main dataset the COVID19 geographic data. This data is refreshed daily, however, we have decided it was best to cut down our frequency to weekly as we would like the ability to quality check and perform other tasks as needed. This would provide our client with a greater accuracy and continuation uninterrupted data. It would be necessary to update the local data with the new Co-Vid data at least weekly in order to keep track of changing numbers of Co-Vid cases to states.
 
 2.6 DATA SECURITY 
-All data is open sourced from the web and does not have any personal information which could be attached to third parties. The data is purely for knowledge and educational purposes and since it is open source is readily available to be utilized. The data that is pulled from the cdc.gov website had to be specifically requested forand as such is not for making high level decisions. Purely for educational purposes and elucidating potential trends
-2.7 DATA LOADING AND AVAILABILITY 
+All data is open sourced from the web and does not have any personal information which could be attached to third parties. The data is purely for knowledge and educational purposes and since it is open source is readily available to be utilized. The data that is pulled from the cdc.gov website had to be specifically requested forand as such is not for making high level decisions. Purely for educational purposes and elucidating potential trends.
+
+2.7 DATA LOADING AND AVAILABILITY
+
 We have loaded the data from our CSV into pgAdmin using the graphical user interface of pgAdmin. We created our tables first and imported the data into the system by right clicking on Table name and clicking ‘Import’. For access client we will use an ODBC connector – clients can go to ‘https://odbc.postgresql.org/’ to download the library. We will also use ODBC because we would like the client to be able to use our data with a variety of different programs such as R, Python, SPSS, and Excel. We would to not only have our client pull our captures organized data but also be able to do their own inferences if need be and do this seamlessly with an ODBC connector. This will allow them to access the data with most third-party providers. Included in the instructions and set-up for the client we will be providing the necessary packages need to be installed to run their choice of third party provider such as pyodbc for Python and RODBC for R. Since we will need admin rights we will be providing an initial 1on1 consultation to install these drivers on our customers desired portals. Client will be able to run queries on the initial dataset.
 
 # Data One link
